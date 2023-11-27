@@ -39,6 +39,17 @@ def Encrypt(hash_text : str):
     hash_object = hashlib.sha256(byte_data)
     return hash_object.hexdigest()
 
+def CustomEncryptChecker(hash : str, userText : str, env_name : str):
+    import hashlib, os
+    userText += os.environ[f'{env_name}']
+    byte_data = userText.encode("UTF-8")
+    hash_object = hashlib.sha256(byte_data)
+    hash2 = hash_object.hexdigest()
+    if hash == hash2:
+        return True
+    else:
+        return False
+
 def EncyptChecker(hash : str, userText : str):
     import hashlib, os
     userText += os.environ['LF-ENC']
