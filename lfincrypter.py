@@ -66,6 +66,26 @@ def Set_database(database : str):
     os.environ['LF-database'] = database
     return None
 
-def SetUp_database(userid : str, userpw : str, database : str):
+def SetUp_database(database_address : str, userid : str, userpw : str, database : str, table : str):
     import os
+    os.environ['LF-Daddress'] = database_address
+    os.environ['LF-Did'] = userid
+    os.environ['LF-Dpw'] = userpw
+    os.environ['LF-database'] = database
+    os.environ['LF-Dtable'] = table
     return None
+
+def GetDB_LoginInfomation(isprint : bool):
+    if(isprint):
+        import datetime, os
+        output = f"""
+        Now time : {datetime.datetime.now()}
+        your database login lofomation is ...
+        database_address : {os.environ['LF-Daddress']}
+        database_ID : {os.environ['LF-Did']}
+        database_PW : {len(os.environ['LF-Dpw']) * '*'}
+        database_Table : {os.environ['LF-Dtable']}
+        """
+        print(output)
+    return output
+
