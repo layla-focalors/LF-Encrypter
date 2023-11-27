@@ -60,3 +60,12 @@ def EncyptChecker(hash : str, userText : str):
         return True
     else:
         return False
+
+def Set_database(database : str):
+    import os
+    os.environ['LF-database'] = database
+    return None
+
+def SetUp_database(userid : str, userpw : str, database : str):
+    import os
+    return None

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name                = 'LF-Encrypter',
-    version             = '1.0',
+    version             = '1.1',
     description         = 'Layla-Focalors, login Encrypter',
     author              = 'Layla-Focalors',
     author_email        = 'sjhhjs2004@kakao.com',
