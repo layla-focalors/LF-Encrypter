@@ -1,0 +1,2 @@
+def EncryptText(algorythm, text):
+    
