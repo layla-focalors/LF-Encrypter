@@ -89,3 +89,12 @@ def GetDB_LoginInfomation(isprint : bool):
         print(output)
     return output
 
+# sliceing, type = list ["'key' : 'value'"]
+def Insert_table(section : list):
+    for i in section:
+        key = i.split(":")[0]
+        valuem = i.split(":")[1]
+        print(i.split(":"))
+        print(key)
+        print(valuem)
+    return None

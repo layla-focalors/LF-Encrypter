@@ -7,7 +7,7 @@ setup(
     author              = 'Layla-Focalors',
     author_email        = 'sjhhjs2004@kakao.com',
     url                 = 'https://github.com/layla-focalors/LF-Encrypter',
-    install_requires    =  ['os', 'hashlib'],
+    install_requires    =  ['os', 'hashlib','pymysql', 'datetime'],
     packages            = find_packages(exclude = []),
     keywords            = ['encrypt', 'sha265', 'database'],
     python_requires     = '>=3',
